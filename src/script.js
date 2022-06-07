@@ -62,7 +62,7 @@ const material = new THREE.ShaderMaterial({
     fragmentShader: fragmentShader,
     side: THREE.DoubleSide
 });
-
+geometry.setAttribute('position1', new THREE.BufferAttribute(geometry1.attributes.position.array, 3));
 // Mesh
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
