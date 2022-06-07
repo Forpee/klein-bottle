@@ -64,6 +64,7 @@ const material = new THREE.ShaderMaterial({
 });
 geometry.setAttribute('position1', new THREE.BufferAttribute(geometry1.attributes.position.array, 3));
 // Mesh
+// yes
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
