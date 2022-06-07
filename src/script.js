@@ -43,10 +43,14 @@ function gKleinFn(u, v, target) {
     let n = 3;
     let m = 1;
 
-    let x = (a + Math.cos(n * u / 2.0) * Math.sin(v));
+    let x = (a + Math.cos(n * u / 2.0) * Math.sin(v) - Math.sin(n * u / 2.0) * Math.sin(2 * v)) * Math.cos(m * u / 2.0);
+    let y = (a + Math.cos(n * u / 2.0) * Math.sin(v) - Math.sin(n * u / 2.0) * Math.sin(2 * v)) * Math.sin(m * u / 2.0);
+    let z = Math.sin(n * u / 2.0) * Math.sin(v) + Math.cos(n * u / 2.0) * Math.sin(2 * v);
+
+    target.set(x, y, z);
 };
 
-let geometry = new ParametricGeometry(sphereFunction, 32, 32);
+let geometry = new ParametricGeometry(gKleinFn, 32, 32);
 
 // Material
 const material = new THREE.ShaderMaterial({
