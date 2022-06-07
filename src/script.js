@@ -51,6 +51,7 @@ function gKleinFn(u, v, target) {
 };
 
 let geometry = new ParametricGeometry(gKleinFn, 32, 32);
+let geometry1 = new ParametricGeometry(sphereFunction, 32, 32);
 
 // Material
 const material = new THREE.ShaderMaterial({
