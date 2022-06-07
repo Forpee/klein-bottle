@@ -9,6 +9,11 @@ void main()
     
     vec3 a=vec3(.5);
     vec3 b=vec3(.5);
+    vec3 c=vec3(2.,1.,0.);
     
-    gl_FragColor=vec4(vec3(abs(diff)),1.);
+    vec3 d=vec3(.5,.2,.25);
+    float pi=3.1415926535897932384626433832795;
+    vec3 color=a+b*cos(2*pi*(c*diff+d+uTime));
+    
+    gl_FragColor=vec4(color,1.);
 }
