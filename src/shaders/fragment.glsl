@@ -13,7 +13,7 @@ void main()
     
     vec3 d=vec3(.5,.2,.25);
     float pi=3.1415926535897932384626433832795;
-    vec3 color=a+b*cos(2*pi*(c*diff+d+uTime));
+    vec3 color=a+b*cos(2.*pi*(c*diff+d+uTime));
     
     gl_FragColor=vec4(color,1.);
 }
