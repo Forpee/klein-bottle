@@ -35,6 +35,10 @@ let sphereFunction = (u, v, target) => {
     target.set(x, y, z);
 };
 
+function gKleinFn(u, v, target) {
+
+};
+
 let geometry = new ParametricGeometry(sphereFunction, 32, 32);
 
 // Material
