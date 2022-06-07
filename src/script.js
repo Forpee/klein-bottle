@@ -43,7 +43,7 @@ function gKleinFn(u, v, target) {
     let n = 3;
     let m = 1;
 
-    let x = (a + Math.cos(n * u / 2.0));
+    let x = (a + Math.cos(n * u / 2.0) * Math.sin(v));
 };
 
 let geometry = new ParametricGeometry(sphereFunction, 32, 32);
