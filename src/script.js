@@ -36,7 +36,12 @@ let sphereFunction = (u, v, target) => {
 };
 
 function gKleinFn(u, v, target) {
+    u *= Math.PI * 4;
+    v *= Math.PI * 2;
 
+    let a = 3;
+    let n = 3;
+    let m = 1;
 };
 
 let geometry = new ParametricGeometry(sphereFunction, 32, 32);
